@@ -38,7 +38,11 @@ const deleteCookie = (key) => {
 };
 
 const setCookie = (key, value) => {
-	document.cookie = `${key} = ${value};`;
+	let now = new Date();
+        let time = now.getTime();
+         let expireTime = time + 1000*36000;
+        now.setTime(expireTime);
+	document.cookie = `${key} = ${value};expires=+${now.toUTCString()};`;
 };
 
 const viewCookies = () => {

@@ -42,7 +42,7 @@ const setCookie = (key, value) => {
         let time = now.getTime();
          let expireTime = time + 1000*36000;
         now.setTime(expireTime);
-	document.cookie = `${key} = ${value};expires=+${now.toUTCString()};`;
+	document.cookie = `${key} = ${value} ;expires = ${now.toUTCString()};`;
 };
 
 const viewCookies = () => {

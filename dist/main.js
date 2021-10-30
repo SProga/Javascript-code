@@ -1,0 +1,1 @@
+(()=>{"use strict";document.querySelector(".btn-primary").addEventListener("click",(()=>{let e=document.querySelector("#input1"),t=document.querySelector("#input2"),u=document.querySelector("#operation").value;const{value:r}=e,{value:l}=t;"add"===u&&alert(+r+ +l),"sub"===u&&alert(function(e,t){return e-t}(r,l)),"mult"===u&&alert(((e,t)=>e*t)(r,l)),e.value="",t.value=""}))})();
